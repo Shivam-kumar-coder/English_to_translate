@@ -7,10 +7,11 @@ class trans:
     model = MarianMTModel.from_pretrained('Helsinki-NLP/opus-mt-en-hi')
     return model, tokenize
   def punjabi(self):
-    Helsinki-NLP/opus-mt-pa-en
-    tokenize = MarianTokenizer.from_pretrained("Helsinki-NLP/opus-mt-en-pa")
-    model = MarianMTModel.from_pretrained("Helsinki-NLP/opus-mt-en-pa")
-    return model,tokenize
+    model_name = "Helsinki-NLP/opus-mt-en-pa"
+    tokenizer = MarianTokenizer.from_pretrained(model_name)
+    model = MarianMTModel.from_pretrained(model_name)
+    return model, tokenizer
+
   def tamil(self):
     tokenize = MarianTokenizer.from_pretrained('Helsinki-NLP/opus-mt-en-ta')
     model = MarianMTModel.from_pretrained('Helsinki-NLP/opus-mt-en-ta')
