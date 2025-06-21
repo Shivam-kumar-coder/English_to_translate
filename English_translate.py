@@ -8,23 +8,23 @@ class trans:
     return model, tokenize
   def punjabi(self):
     tokenize = MarianTokenizer.from_pretrained('Helsinki-NLP/opus-mt-en-pa')
-    model = "Helsinki-NLP/opus-mt-en-pa"
+    model = MarianMTModel.from_pretrained('Helsinki-NLP/opus-mt-en-pa')
     return model,tokenize
   def tamil(self):
     tokenize = MarianTokenizer.from_pretrained('Helsinki-NLP/opus-mt-en-ta')
-    model_name = "Helsinki-NLP/opus-mt-en-ta"
+    model = MarianMTModel.from_pretrained('Helsinki-NLP/opus-mt-en-ta')
     return model,tokenize
   def urdu(self):
     tokenize = MarianTokenizer.from_pretrained('Helsinki-NLP/opus-mt-en-ur')
-    model = "Helsinki-NLP/opus-mt-en-ur"
+     model = MarianMTModel.from_pretrained('Helsinki-NLP/opus-mt-en-ur')
     return model,tokenize
   def marathi(self):
     tokenize = MarianTokenizer.from_pretrained('Helsinki-NLP/opus-mt-en-mr')
-    model = "Helsinki-NLP/opus-mt-en-mr"
+     model = MarianMTModel.from_pretrained('Helsinki-NLP/opus-mt-en-mr')
     return model,tokenize
   def gujrati(self):
     tokenize = MarianTokenizer.from_pretrained('Helsinki-NLP/opus-mt-en-gu')
-    model = "Helsinki-NLP/opus-mt-en-gu"
+     model = MarianMTModel.from_pretrained('Helsinki-NLP/opus-mt-en-gu')
     return model,tokenize
 
 st.title(" Language Translater 🚀")
