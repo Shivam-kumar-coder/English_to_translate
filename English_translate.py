@@ -1,7 +1,6 @@
 import streamlit as st
 from transformers import MarianMTModel, MarianTokenizer
-
-st.cache_resource
+@st.cache_resource
 def process():
   global tokenize
   global model
