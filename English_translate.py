@@ -33,9 +33,9 @@ l=st.selectbox(" Select Your Language Convert ",["hindi","Urdu","Gujrati","Tamil
 if i:
   if l=="Urdu":
     p=trans()
-    mode,tokeniz=p.urdu()
+    model,tokeniz=p.urdu()
     t=tokeniz(i,return_tensors='pt',padding=True)
-    m=mode.generate(**t)
+    m=model.generate(**t)
     d=tokeniz.decode(m[0],skip_special_tokens=True)
     st.write(d)
 else:
