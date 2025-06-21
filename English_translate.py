@@ -2,8 +2,8 @@ import streamlit as st
 from transformers import MarianMTModel,MarianTokenizer
 
 @st.cache_resouce
-h_tokenizer= MarianTokenizer.from_pretrained('Helsinki-NLP/opus-mt-en-hi')
-h_model=MaranMTModel.from_pretrained('Helsinki-NLP/opus-mt-en-hi')
+tokenize= MarianTokenizer.from_pretrained('Helsinki-NLP/opus-mt-en-hi')
+model=MaranMTModel.from_pretrained('Helsinki-NLP/opus-mt-en-hi')
 
 st.title(" Language Translater 🚀")
 i=st.chat_input("enter your Text")
