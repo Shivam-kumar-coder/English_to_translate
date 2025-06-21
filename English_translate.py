@@ -8,8 +8,8 @@ class trans:
     return model, tokenize
   def punjabi(self):
     Helsinki-NLP/opus-mt-pa-en
-    tokenize = MarianTokenizer.from_pretrained(' Helsinki-NLP/opus-mt-pa-en')
-    model = MarianMTModel.from_pretrained(' Helsinki-NLP/opus-mt-pa-en')
+    tokenize = MarianTokenizer.from_pretrained("Helsinki-NLP/opus-mt-en-pa")
+    model = MarianMTModel.from_pretrained("Helsinki-NLP/opus-mt-en-pa")
     return model,tokenize
   def tamil(self):
     tokenize = MarianTokenizer.from_pretrained('Helsinki-NLP/opus-mt-en-ta')
