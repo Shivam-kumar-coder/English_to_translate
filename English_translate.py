@@ -16,15 +16,15 @@ class trans:
     return model,tokenize
   def urdu(self):
     tokenize = MarianTokenizer.from_pretrained('Helsinki-NLP/opus-mt-en-ur')
-     model = MarianMTModel.from_pretrained('Helsinki-NLP/opus-mt-en-ur')
+    model = MarianMTModel.from_pretrained('Helsinki-NLP/opus-mt-en-ur')
     return model,tokenize
   def marathi(self):
     tokenize = MarianTokenizer.from_pretrained('Helsinki-NLP/opus-mt-en-mr')
-     model = MarianMTModel.from_pretrained('Helsinki-NLP/opus-mt-en-mr')
+    model = MarianMTModel.from_pretrained('Helsinki-NLP/opus-mt-en-mr')
     return model,tokenize
   def gujrati(self):
     tokenize = MarianTokenizer.from_pretrained('Helsinki-NLP/opus-mt-en-gu')
-     model = MarianMTModel.from_pretrained('Helsinki-NLP/opus-mt-en-gu')
+    model = MarianMTModel.from_pretrained('Helsinki-NLP/opus-mt-en-gu')
     return model,tokenize
 
 st.title(" Language Translater 🚀")
