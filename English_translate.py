@@ -12,7 +12,7 @@ i=st.chat_input("enter your Text")
 l=st.selectbox(" Select Your Language Convert ",("hindi"),)
 if i:
   mode,tokeniz=process()
-  t=tokeniz(i,return_tensor='pt',padding=True)
+  t=tokeniz(i,return_tensors='pt',padding=True)
   m=mode.generate(**t)
   d=tokeniz.decode(m,skip_special_tokens=True)
   st.write(d)
