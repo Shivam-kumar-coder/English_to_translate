@@ -86,4 +86,4 @@ if i:
       st.success("Converted Succesfully")
       st.write(d)  
 else:
-  st.write("please enter your text")
+  st.info("Please Enter Your Text")
