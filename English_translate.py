@@ -9,10 +9,12 @@ def process():
 
 st.title(" Language Translater 🚀")
 i=st.chat_input("enter your Text")
-l=st.selectbox(" Select Your Language Convert ")
+l=st.selectbox(" Select Your Language Convert ",("hindi"),)
 if i:
   process()
   t=tokenize(i,return_tensor='pt',padding=True)
   m=model.generate(**t)
   d=tokenize.decode(m,skip_special_token=True)
   st.write(d)
+else:
+  st.write("please enter your text")
