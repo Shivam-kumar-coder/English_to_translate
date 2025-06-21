@@ -1,5 +1,5 @@
 import streamlit as st
-from transformers import MarianMTModel,MarianTokenizer
+from transformers import MarianMTModel, MarianTokenizer
 
 @st.cache_resouce
 tokenize= MarianTokenizer.from_pretrained('Helsinki-NLP/opus-mt-en-hi')
