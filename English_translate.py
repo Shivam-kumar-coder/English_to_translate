@@ -29,14 +29,61 @@ class trans:
 
 st.title(" Language Translater 🚀")
 i=st.chat_input("enter your Text")
-l=st.selectbox(" Select Your Language Convert ",["hindi","Urdu","Gujrati","Tamil","Marathi"])
+l=st.selectbox(" Select Your Language Convert ",["Hindi","Urdu","Punjabi","Gujrati","Tamil","Marathi"])
 if i:
   if l=="Urdu":
-    p=trans()
-    model,tokeniz=p.urdu()
-    t=tokeniz(i,return_tensors='pt',padding=True)
-    m=model.generate(**t)
-    d=tokeniz.decode(m[0],skip_special_tokens=True)
-    st.write(d)
+    with st.spinner("Convert Into Urdu....."):
+      p=trans()
+      model,tokeniz=p.urdu()
+      t=tokeniz(i,return_tensors='pt',padding=True)
+      m=model.generate(**t)
+      d=tokeniz.decode(m[0],skip_special_tokens=True)
+      st.success("Converted Succesfully")
+      st.write(d)
+  elif l=="Hindi":
+    with st.spinner("Convert Into Hindi....."):
+      p=trans()
+      model,tokeniz=p.hindi()
+      t=tokeniz(i,return_tensors='pt',padding=True)
+      m=model.generate(**t)
+      d=tokeniz.decode(m[0],skip_special_tokens=True)
+      st.success("Converted Succesfully")
+      st.write(d)
+  elif l=="Gujrati":
+    with st.spinner("Convert Into Gujrati...."):
+      p=trans()
+      model,tokeniz=p.gujrati()
+      t=tokeniz(i,return_tensors='pt',padding=True)
+      m=model.generate(**t)
+      d=tokeniz.decode(m[0],skip_special_tokens=True)
+      st.success("Converted Succesfully")
+      st.write(d)
+  elif l=="Tamil":
+    with st.spinner("Convert Into Tamil...."):
+      p=trans()
+      model,tokeniz=p.tamil()
+      t=tokeniz(i,return_tensors='pt',padding=True)
+      m=model.generate(**t)
+      d=tokeniz.decode(m[0],skip_special_tokens=True)
+      st.success("Converted Succesfully")
+      st.write(d)
+  elif l=="Marathi":
+    with st.spinner("Convert Into Marathi....."):
+      p=trans()
+      model,tokeniz=p.marathi()
+      t=tokeniz(i,return_tensors='pt',padding=True)
+      m=model.generate(**t)
+      d=tokeniz.decode(m[0],skip_special_tokens=True)
+      st.success("Converted Succesfully")
+      st.write(d)
+  elif l=="Punjabi":
+    with st.spinner("convert into Punjabi ...."):
+      p=trans()
+      model,tokeniz=p.punjabi()
+      t=tokeniz(i,return_tensors='pt',padding=True)
+      m=model.generate(**t)
+      d=tokeniz.decode(m[0],skip_special_tokens=True)
+      st.success("Converted Succesfully")
+      st.write(d)  
 else:
   st.write("please enter your text")
